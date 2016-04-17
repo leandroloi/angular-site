@@ -38,17 +38,17 @@ angularSite.config(['$routeProvider', '$locationProvider', function AppConfig($r
 
     );
 
-    run(function($rootScope, $location) {
-        $rootScope.$on("$routeChangeStart", function (event, next, current) {
-            if ($rootScope.loggedInUser == null) {
-                // no logged user, redirect to /login
-                if (next.templateUrl === "pages/login.html") {
-                } else {
-                    $location.path("/login");
-                }
-            }
-        });
-    });
+    //run(function($rootScope, $location) {
+    //    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+    //        if ($rootScope.loggedInUser == null) {
+    //            // no logged user, redirect to /login
+    //            if (next.templateUrl === "pages/login.html") {
+    //            } else {
+    //                $location.path("/login");
+    //            }
+    //        }
+    //    });
+    //});
 
 }]);
 
